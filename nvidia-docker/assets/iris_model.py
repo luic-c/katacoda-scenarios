@@ -1,22 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# <p><span style="font-size: 13pt; color: #333333;"><strong>The Iris Dataset</strong></span><br /><span style="color: #333333;"><strong>Features:</strong></span></p>
-# <ul>
-# <li><span style="color: #333333;">Petal length</span></li>
-# <li><span style="color: #333333;">Petal width</span></li>
-# <li><span style="color: #333333;">Sepal length</span></li>
-# <li><span style="color: #333333;">Sepal width</span></li>
-# </ul>
-# <p><span style="color: #333333;"><strong>Target variable: Species</strong></span></p>
-# <ul>
-# <li><span style="color: #333333;">Versicolor</span></li>
-# <li><span style="color: #333333;">Virginica</span></li>
-# <li><span style="color: #333333;">Setosa</span></li>
-# </ul>
-
-# In[1]:
-
 
 #Importing necessary packages
 from sklearn import datasets
