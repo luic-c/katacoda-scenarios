@@ -29,6 +29,20 @@
     "intro": {
       "text": "intro.md"
     },
+	"assets": {
+		"client": [
+		  {
+			"file": "iris_model.py",
+			"target": "~/"
+		  }
+		],
+		"host01": [
+		  {
+			"file": "iris_model.py",
+			"target": "~/"
+		  }
+		]
+	}
     "finish": {
       "text": "finish.md"
     }
