@@ -4,7 +4,7 @@ Firstly, we should have a ML model. We use the basic iris dataset image classifi
 
 For some of you, docker may not look very interesting to you. If you are familiar with Docker, you can skip to the task. If you aren't, why not try a little test? Try to run the following command:
 
-`python iris_model.py`{{execute}}
+`python3 iris_model.py`{{execute}}
 
 You would find there is an ImportError. That's normal because we haven't install necessary modules. We can install it using `pip install`, but things get tricky for your clients who may have a very complicated infrastructure, or they are too lazy to simply track what they have installed. Let's not start to talk about the difference between different package versions. 
 
@@ -26,7 +26,7 @@ We need to prepare a model for us to train and deploy. For simplicity, we have a
 
 You can check the file by running the command below:
 
-`ls` {{execute}}
+`ls`{{execute}}
 
 To store the model as a pickle file, add the following command at the end of the script:
 

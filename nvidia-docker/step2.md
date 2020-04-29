@@ -50,7 +50,7 @@ if __name__ == '__main__':
 
 To try out our app, we use the following command:
 
-` curl -X 127.0.0.1:5000 `{{execute}}
+`curl -X 127.0.0.1:5000`{{execute}}
 
 
 

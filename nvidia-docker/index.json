@@ -32,13 +32,13 @@
 	"assets": {
 		"client": [
 		  {
-			"file": "iris_model.py",
+			"file": "iris_model.py", "request.py",
 			"target": "~/"
 		  }
 		],
 		"host01": [
 		  {
-			"file": "iris_model.py",
+			"file": "iris_model.py", "request.py",
 			"target": "~/"
 		  }
 		]
