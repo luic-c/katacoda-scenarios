@@ -5,14 +5,13 @@ Now that we have an application ready to be containerized, we need to write a Do
 
 
 ```dockerfile
-FROM python:3.6
+FROM ubuntu:latest
 COPY ./request.py /deploy/
-COPY ./requirements.txt /deploy/
 COPY ./model.pkl /deploy/
 WORKDIR /deploy/
-RUN pip install -r requirements.txt
+RUN pip install flask sklearn pandas seaborn matplotlib
 EXPOSE 80
-ENTRYPOINT ["python", "request.py"]
+ENTRYPOINT ["python3", "request.py"]
 ```
 
 
