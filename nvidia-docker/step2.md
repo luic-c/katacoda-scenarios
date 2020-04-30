@@ -1,6 +1,6 @@
 Now that we have a model ready, the next step is to develop an API for sending data and receiving prediction results.
 
-## Task
+## Flask
 
 Here we choose to use Flask to build API because it is more common. The same can be applied to other frameworks like Django.
 

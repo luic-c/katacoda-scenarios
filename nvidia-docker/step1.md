@@ -22,7 +22,7 @@ Docker, to summarize, is to unify the runtime environment of the application by 
 
 
 
-## Task
+## Generate Pickle File
 
 We need to prepare a model for us to train and deploy. For simplicity, we have a simple image classification model against the iris dataset (iris_model.py) as an example. You can prepare one on your own, but an important note is the model will be stored as a pickle file after executing it. This allows us to open it later and reuse the model for prediction by calling the function `predict()` using new input data.
 
