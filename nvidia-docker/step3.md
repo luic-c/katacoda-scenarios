@@ -8,7 +8,7 @@ The Dockerfile is a list of commands that the user needed to execute in order to
 
 Here we first specify the base image to work on (`ubuntu:latest`), then run `apt-get` and `pip install` to get python3 and necessary packages. We also expose port 80 to outside of the container for our flask app to use. Finally, the Entrypoint specifies the main command to run.
 
-<pre class="file" data-target="editor">
+<pre class="file" data-target="clipboard">
 FROM ubuntu:latest
 RUN apt-get update \  
   && apt-get install -y python3-pip python3-dev \  
