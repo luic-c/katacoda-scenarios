@@ -20,7 +20,10 @@ import sys
 from sklearn.neighbors import KNeighborsClassifier
 knn = pickle.load(open('model.pkl', 'rb'))
 app = Flask(__name__)
-@app.route('/predict')
+@app.route('/')
+def home_endpoint():
+    return 'Plz input some data!'
+@app.route('/predict', methods=['POST'])
 def predict_iris():
     # The model requires 4 arguments
     sl = request.args.get('sl')
@@ -56,10 +59,13 @@ knn = pickle.load(open('model.pkl', 'rb'))
 app = Flask(__name__)
 ```
 
-3. Define a 'predict' endpoint
+3. Define a 'home' and 'predict' endpoint
 
 ```python
-@app.route('/predict')
+@app.route('/')
+def home_endpoint():
+    return 'Plz input some data!'
+@app.route('/predict', methods=['POST'])
 def predict_iris():
     # The model requires 4 arguments
     sl = request.args.get('sl')

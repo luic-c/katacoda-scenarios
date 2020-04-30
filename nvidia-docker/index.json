@@ -42,7 +42,7 @@
   "environment": {
     "uilayout": "editor-terminal",
 	"showdashboard": true,
-	"dashboards": [{"name": "Browser", "port": 80}]
+	"dashboards": [{"name": "Browser", "port": 5000}]
   },
   "backend": {
     "imageid": "ubuntu"
