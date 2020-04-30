@@ -1,6 +1,6 @@
 {
-  "title": "Docker for Machine Learning -- Nvidia Docker",
-  "description": "Enable GPU for Docker",
+  "title": "Docker for Machine Learning",
+  "description": "Deploy Machine Learning Model as Microservice on Docker",
   "difficulty": "Beginner",
   "time": "20",
   "details": {

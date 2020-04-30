@@ -1,6 +1,6 @@
 Firstly, we should have a ML model. We use the basic iris dataset image classification model as a simple example. 
 
-## Little Demo
+## Background
 
 For some of you, docker may not look very interesting to you. If you are familiar with Docker, you can skip to the task. If you aren't, why not try a little test? Try to run the following command:
 
