@@ -13,14 +13,12 @@ Create a new file called `app.py` and copy the below code to the file:
 `touch app.py`{{execute}}
 
 <pre class="file" data-target="clipboard">
-    from flask import Flask, request
+from flask import Flask, request
 import pickle 
 import numpy as np
 import sys
 from sklearn.neighbors import KNeighborsClassifier
-
-knn = pickle.load(open('iris_model.pkl', 'rb'))
-
+knn = pickle.load(open('model.pkl', 'rb'))
 app = Flask(__name__)
 @app.route('/predict')
 def predict_iris():
@@ -29,12 +27,9 @@ def predict_iris():
     sw = request.args.get('sw')
     pl = request.args.get('pl')
     pw = request.args.get('pw')
-
     unseen = np.array([[sl, sw, pl, pw]])
     result = knn.predict(unseen)
-    
-    return 'Predicted result for observation ' + str(unseen) + ' is: ' + str(result)
-    
+    return 'Predicted result for observation ' + str(unseen) + ' is: ' + str(result)   
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
 </pre>
@@ -52,7 +47,7 @@ import numpy as np
 import sys
 from sklearn.neighbors import KNeighborsClassifier
 
-knn = pickle.load(open('iris_model.pkl', 'rb'))
+knn = pickle.load(open('model.pkl', 'rb'))
 ```
 
 2. Initialize Flask object
