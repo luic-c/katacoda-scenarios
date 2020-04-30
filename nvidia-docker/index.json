@@ -26,11 +26,19 @@
 		  {
 			"file": "iris_model.py",
 			"target": "~/"
+		  },
+		  {
+			"file": "model.pkl",
+			"target": "~/"
 		  }
 		],
 		"host01": [
 		  {
 			"file": "iris_model.py",
+			"target": "~/"
+		  },
+		  {
+			"file": "model.pkl",
 			"target": "~/"
 		  }
 		]
