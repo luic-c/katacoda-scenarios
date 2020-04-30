@@ -12,7 +12,7 @@ Create a new file called `app.py` and copy the below code to the file:
 
 `touch app.py`{{execute}}
 
-<pre class="file" data-target="clipboard">
+<pre class="file" data-target="editor">
 from flask import Flask, request
 import pickle 
 import numpy as np
@@ -23,16 +23,15 @@ app = Flask(__name__)
 @app.route('/')
 def home_endpoint():
     return 'Plz input some data!'
-@app.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['GET','POST'])
 def predict_iris():
-    # The model requires 4 arguments
     sl = request.args.get('sl')
     sw = request.args.get('sw')
     pl = request.args.get('pl')
     pw = request.args.get('pw')
     unseen = np.array([[sl, sw, pl, pw]])
     result = knn.predict(unseen)
-    return 'Predicted result for observation ' + str(unseen) + ' is: ' + str(result)   
+    return 'Result of ' + str(unseen) + '=' + str(result) 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
 </pre>
@@ -65,9 +64,8 @@ app = Flask(__name__)
 @app.route('/')
 def home_endpoint():
     return 'Plz input some data!'
-@app.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['GET','POST'])
 def predict_iris():
-    # The model requires 4 arguments
     sl = request.args.get('sl')
     sw = request.args.get('sw')
     pl = request.args.get('pl')
@@ -76,14 +74,14 @@ def predict_iris():
     unseen = np.array([[sl, sw, pl, pw]])
     result = knn.predict(unseen)
     
-    return 'Predicted result for observation ' + str(unseen) + ' is: ' + str(result)
+    return 'Result of ' + str(unseen) + '=' + str(result)
 ```
 
 4. Declare main function
 
 ```python
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
+    app.run(host='0.0.0.0')
 ```
 
 
@@ -92,3 +90,10 @@ To run the flask app we run the command:
 
 `python3 app.py`{{execute}}
 
+Open a new terminal and run the command:
+
+`curl "http://0.0.0.0:5000/predict?sl=4.5&sw=2.1&pl=3.5&pw=1.1"`{{execute}}
+
+We input data to make predictions on the model. If you receive the output like this then it means you pass!
+
+`Result of [['4.5' '2.1' '3.5' '1.1']]=[1]`

@@ -1,3 +1,5 @@
+# Model taken from https://github.com/chauvinhloi/docker-session-practice/blob/build-and-store/Supervised%20Machine%20Learning%20-%20Classification.ipynb
+
 
 #Importing necessary packages
 from sklearn import datasets

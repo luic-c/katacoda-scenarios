@@ -8,7 +8,7 @@ The Dockerfile is a list of commands that the user needed to execute in order to
 
 Here we first specify the base image to work on (`ubuntu:latest`), then run `apt-get` and `pip install` to get python3 and necessary packages. We also expose port 80 to outside of the container for our flask app to use. Finally, the Entrypoint specifies the main command to run.
 
-```dockerfile
+<pre class="file" data-target="editor">
 FROM ubuntu:latest
 RUN apt-get update \  
   && apt-get install -y python3-pip python3-dev \  
@@ -17,7 +17,7 @@ RUN apt-get update \
   && pip3 install flask sklearn pandas seaborn matplotlib
 EXPOSE 80
 ENTRYPOINT ["python3", "app.py"]
-```
+</pre>
 
 
 
@@ -42,4 +42,3 @@ The terminal will show that the container is running and up for (...) minutes.
 
 
 > _Fun Fact: Notice that there is also a NAMES column besides Container ID. It can be used interchangeably as the ID as it is more readable to human. The name generator is actually written in Go, as well as most of Docker code. There is a link for the docker name generator available:  http://frightanic.com/goodies_content/docker-names.php_
-
