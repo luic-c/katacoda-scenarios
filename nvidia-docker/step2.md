@@ -12,7 +12,8 @@ Create a new file called `app.py` and copy the below code to the file:
 
 `touch app.py`{{execute}}
 
-``` 
+```
+<pre class="file" data-target="clipboard">
 from flask import Flask, request
 import pickle 
 import numpy as np
@@ -37,6 +38,7 @@ def predict_iris():
     
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
+</pre>
 ```
 
 

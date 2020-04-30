@@ -26,35 +26,11 @@
 		  {
 			"file": "iris_model.py",
 			"target": "~/"
-		  },
-		  {
-			"file": "request.py",
-			"target": "~/"
-		  },
-		  {
-			"file": "Dockerfile",
-			"target": "~/"
-		  },
-		  {
-			"file": "model.pkl",
-			"target": "~/"
 		  }
 		],
 		"host01": [
 		  {
 			"file": "iris_model.py",
-			"target": "~/"
-		  },
-		  {
-			"file": "request.py",
-			"target": "~/"
-		  },
-		  {
-			"file": "Dockerfile",
-			"target": "~/"
-		  },
-		  {
-			"file": "model.pkl",
 			"target": "~/"
 		  }
 		]
