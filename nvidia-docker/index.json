@@ -42,6 +42,10 @@
 		  {
 			"file": "Dockerfile",
 			"target": "~/"
+		  },
+		  {
+			"file": "model.pkl",
+			"target": "~/"
 		  }
 		],
 		"host01": [
@@ -55,6 +59,10 @@
 		  },
 		  {
 			"file": "Dockerfile",
+			"target": "~/"
+		  },
+		  {
+			"file": "model.pkl",
 			"target": "~/"
 		  }
 		]
