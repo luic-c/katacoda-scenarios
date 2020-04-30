@@ -2,16 +2,21 @@ Now that we have an application ready to be containerized, we need to write a Do
 
 ## Task
 
+The Dockerfile is a list of commands that the user needed to execute in order to generate the image, i.e. setting up the environment or even running the program.
 
+
+
+Here we first specify the base image to work on (`ubuntu:latest`), then run `apt-get` and `pip install` to get python3 and necessary packages. We also expose port 80 to outside of the container for our flask app to use. Finally, the Entrypoint specifies the main command to run.
 
 ```dockerfile
 FROM ubuntu:latest
-COPY ./request.py /deploy/
-COPY ./model.pkl /deploy/
-WORKDIR /deploy/
-RUN pip install flask sklearn pandas seaborn matplotlib
+RUN apt-get update \  
+  && apt-get install -y python3-pip python3-dev \  
+  && cd /usr/local/bin \  
+  && ln -s /usr/bin/python3 python \  
+  && pip3 install flask sklearn pandas seaborn matplotlib
 EXPOSE 80
-ENTRYPOINT ["python3", "request.py"]
+ENTRYPOINT ["python3", "app.py"]
 ```
 
 
@@ -24,6 +29,10 @@ To run the image as container, run the following command to start the terminal i
 
 `docker run -it iris_app /bin/bash  `{{execute}}
 
+To exit the container terminal, we simply type:
+
+`exit  `{{execute}}
+
 To check whether the container is running, run the command:
 
 `docker container ls  `{{execute}}
@@ -32,5 +41,5 @@ The terminal will show that the container is running and up for (...) minutes.
 
 
 
-_Fun Fact: Notice that there is also a NAMES column besides Container ID. It can be used interchangeably as the ID as it is more readable to human. The name generator is actually written in Go, as well as most of Docker code. There is a link for the docker name generator available:  http://frightanic.com/goodies_content/docker-names.php_
+> _Fun Fact: Notice that there is also a NAMES column besides Container ID. It can be used interchangeably as the ID as it is more readable to human. The name generator is actually written in Go, as well as most of Docker code. There is a link for the docker name generator available:  http://frightanic.com/goodies_content/docker-names.php_
 
