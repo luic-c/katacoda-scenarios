@@ -12,7 +12,7 @@ Create a new file called `app.py` and copy the below code to the file:
 
 `touch app.py`{{execute}}
 
-<pre class="file" data-target="editor">
+<pre class="file" data-target="regex???">
 from flask import Flask, request
 import pickle 
 import numpy as np
