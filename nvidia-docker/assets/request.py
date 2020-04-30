@@ -7,7 +7,7 @@ import sys
 from sklearn.neighbors import KNeighborsClassifier
 
 #Load trained model 
-knn = pickle.load(open('iris_model.pkl', 'rb'))
+knn = pickle.load(open('model.pkl', 'rb'))
 
 #Initialize Flask app
 app = Flask(__name__)

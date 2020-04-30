@@ -6,7 +6,13 @@ For some of you, docker may not look very interesting to you. If you are familia
 
 `python3 iris_model.py`{{execute}}
 
-You would find there is an ImportError. That's normal because we haven't install necessary modules. We can install it using `pip install`, but things get tricky for your clients who may have a very complicated infrastructure, or they are too lazy to simply track what they have installed. Let's not start to talk about the difference between different package versions. 
+You would find there is an ImportError. That's normal because we haven't install necessary modules. We can install it using `pip install`, but things get tricky for your clients who may have a very complicated infrastructure, or they are too lazy to simply track what they have installed. 
+
+(If you really want, you can run following command to run the model:)
+
+`pip install sklearn pandas matplotlib seaborn`{{execute}}
+
+Let's not start to talk about the difference between different package versions. 
 
 What to do then? Ditch your work? Pray to God that your model hopefully works on your client's machine?
 
